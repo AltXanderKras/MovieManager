@@ -9,6 +9,7 @@ public class MovieManager {
     }
 
     public MovieManager(int limit) {
+
         this.limit = limit;
     }
 
@@ -33,10 +34,10 @@ public class MovieManager {
 
     public String[] findLastMovies() {
         int resultLength;
-        if (movies.length < 10) {
+        if (movies.length < limit) {
             resultLength = movies.length;
         } else {
-            resultLength = 10;
+            resultLength = limit;
         }
 
         String[] result = new String[resultLength];
